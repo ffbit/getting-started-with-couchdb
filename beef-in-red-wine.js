@@ -46,6 +46,7 @@
    "text": "Return the onion and meats to the pan with the mushrooms, bay leaf and seasoning. Return to the boil. "
   },
   {
+   "step": 6,
    "text": "Place in oven and cook for 1 hour 30 min until beef is tender."
   }
  ],
