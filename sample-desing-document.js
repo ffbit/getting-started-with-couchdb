@@ -9,6 +9,9 @@
     },
     "by_keyword": {
       "map": "function(doc) { for (var i = 0; i < doc.keywords.length; i++) { emit(doc.keywords[i], doc); } }"
+    },
+    "by_ingredients": {
+      "map": "function(doc) { for (var i = 0; i < doc.ingredients.length; i++) { emit(doc.ingredients[i].ingredient, null) } }"
     }
   },
   "shows": {
