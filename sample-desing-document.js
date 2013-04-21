@@ -8,7 +8,8 @@
       "map": "function(doc) { if (doc.title) { emit(doc.title, null); } }"
     },
     "by_keyword": {
-      "map": "function(doc) { for (var i = 0; i < doc.keywords.length; i++) { emit(doc.keywords[i], doc); } }"
+      "map": "function(doc) { for (var i = 0; i < doc.keywords.length; i++) { emit(doc.keywords[i], null); } }",
+      "reduce": "_count"
     },
     "by_ingredients": {
       "map": "function(doc) { for (var i = 0; i < doc.ingredients.length; i++) { emit(doc.ingredients[i].ingredient, null) } }"
