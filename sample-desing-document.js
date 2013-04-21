@@ -12,6 +12,9 @@
     },
     "by_ingredients": {
       "map": "function(doc) { for (var i = 0; i < doc.ingredients.length; i++) { emit(doc.ingredients[i].ingredient, null) } }"
+    },
+    "by_ingredient_time": {
+      "map": "function(doc) { if (doc.ingredients) { for (var i = 0; i < doc.ingredients.length; i++) { if (doc.ingredients[i].ingredient != null) { emit([doc.ingredients[i].ingredient, parseInt(doc.cooktime)], null); } } } }"
     }
   },
   "shows": {
